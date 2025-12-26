@@ -1,0 +1,91 @@
+/*CSS Selectors and Specificity:*/
+/* Universal reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Type selector */
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+/* Class selector */
+.input-field {
+  padding: 8px;
+  border: 1px solid gray;
+}
+
+/* ID selector */
+#signup-form {
+  width: 300px;
+  margin: auto;
+}
+
+/* Attribute selector: selecting an attribute of some tag */
+input[type="password"] {
+  border: 2px solid red;
+}
+input[type="text"] {
+  border: 2px solid blue;
+}
+input[required] {
+  background: lightyellow;
+}
+
+/* Pseudo-class */
+/*Dynamic: hover, focus*/
+.input-field:focus {
+  border-color: blue;
+}
+a:hover {
+  color: green;
+}
+input:focus {
+  border-color: orange;
+}
+
+/*Structural:*/
+li:nth-child(2) {
+  color: red;
+}
+p:first-of-type {
+  font-weight: bold;
+}
+
+/* Pseudo-element: before, after, first-letter, first-line, selection, placeholder */
+label::after {
+  content: " *";
+  color: red;
+}
+
+/* Specificity override example */
+.input-field {
+  border: 1px solid gray;
+} /* Base */
+#username.input-field {
+  border: 2px solid green;
+} /* ID wins */
+
+/*COMBINATORS*/
+/*Descendant: Descendant (div p) → Selects <p> inside <div> (any depth)*/
+div p {
+  color: blue;
+}
+
+/*Child: Child (div > p) → Selects only direct children <p> of <div>.*/
+div > p {
+  font-weight: bold;
+}
+
+/*Adjacent Sibling: Adjacent Sibling (h1 + p) → Selects the <p> right after <h1>*/
+h1 + p {
+  font-style: italic;
+}
+
+/*General Sibling (h1 ~ p) → Selects all <p> after <h1> (not just first).*/
+h1 ~ p {
+  color: red;
+}
