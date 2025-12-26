@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced HTML</title>
+    <!-- PRELOAD FONT AND RESOURCES
+            - Use preload for critical CSS, JS, and fonts you know will be needed. 
+    -->
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="app.js" as="script" />
+    <link
+      rel="preload"
+      href="font.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+  <body>
+    <!-- DETAILS AND SUMMARY 
+        - Used to make folding content without javascript
+    -->
+    <h2>FAQ Section</h2>
+    <details>
+      <summary>What is HTML?</summary>
+      <p>
+        HTML stands for HyperText Markup Language. It structures web content.
+      </p>
+    </details>
+    <details>
+      <summary>What is the difference between HTML and CSS?</summary>
+      <p>
+        HTML defines structure, CSS defines styling (colors, layout, fonts).
+      </p>
+    </details>
+    <details>
+      <summary>Can I use HTML without CSS?</summary>
+      <p>Yes, but your page will look plain and unstyled.</p>
+    </details>
+
+    <!-- SCRIPT LOADING 
+     - **Default `<script>`**: Blocks rendering until script is loaded + executed.
+        - ASYNC:
+            - Script loads **in parallel** with HTML parsing.
+            - Executes **immediately after loading** (can run before HTML is finished).
+            - Best for **independent scripts** (analytics, ads).
+        - DEFER: 
+            - Script loads in parallel but executes **after HTML parsing is done**.
+            - Keeps order if multiple scripts.
+            - Best for **scripts that need DOM ready**.
+    async: for independent, non-DOM dependent scripts
+    defer: for main JS that depends on the DOM 
+    -->
+    <script src="main.js" defer></script>
+    <script src="analytics.js" async></script>
+  </body>
+</html>

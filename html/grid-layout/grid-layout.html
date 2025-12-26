@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 50px auto auto;
+      }
+
+      .grid-items {
+        border: 1px solid sienna;
+      }
+      header {
+        background-color: lightcoral;
+        color: white;
+        grid-column: span 3;
+      }
+      aside {
+        background-color: lightblue;
+        grid-row: span 2;
+      }
+      main {
+        background-color: lightcyan;
+        grid-column: span 2;
+        grid-row: span 2;
+        min-height: 88vh;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+      }
+      .main-items {
+        height: 150px;
+        width: 150px;
+        border: 1px solid black;
+      }
+      footer {
+        background-color: lightyellow;
+        grid-column: span 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="grid-items">Header</header>
+      <aside class="grid-items">Sidebar</aside>
+      <main class="grid-items">
+        <div class="main-items">1</div>
+        <div class="main-items">2</div>
+        <div class="main-items">3</div>
+        <div class="main-items">4</div>
+      </main>
+      <footer class="grid-items">Footer</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility</title>
+  </head>
+  <body>
+    <!-- ALT TEXT FOR IMAGES -->
+    <!-- Images with alt describe for screen readers -->
+    <img src="profile.jpg" tabindex="0" alt="Portrait of John Doe smiling" />
+    <!-- If image is decorative, use empty alt -->
+    <img src="border.png" alt="" />
+
+    <!-- ARIA ATTRIBUTES -->
+    <!-- role: tells assistive tech what an element is, if not already semantic -->
+    <div role="button" tabindex="0">Click Me</div>
+    <!-- aria-label: Gives an accessible name when no visible label exists 
+        1. It can be used when you there is no text like you are using icon for button text
+        2. Use only when it is not semantic tag
+        3. Use aria-labelledby when another element describes it like a form described by heading
+        4. Use aria-describedby adds extra description beyond label
+        5. aria-live for live upates like alert, status updates, chat messages 
+    -->
+    <button aria-label="close-menu">Close</button>
+    <!-- aria hidden: true: Hides something from screen readers -->
+    <span aria-hidden="true"></span>
+
+    <!-- TAB ORDER AND FOCUS -->
+    <!--tabindex:0 : all interactive elements(links, buttons, inputs) should be focusable via Tab 
+    Custom elements must use tabindex="0" to be keyboard-accessible.
+    -->
+    <div role="button" tabindex="0">Custom Button</div>
+
+    <!-- Labels with Input: Always associate label with input or wrap input inside the label -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+
+    <!-- Form usable with keyboard: tab moves forward, shift+tab moves backward -->
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" cols="30"></textarea
+      ><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

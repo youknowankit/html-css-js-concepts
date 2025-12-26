@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links and Navigation</title>
+  </head>
+  <body>
+    <section id="contact">
+      <h2>Contact Me</h2>
+    </section>
+
+    <!-- ANCHOR TAG  -->
+    <a href="https://www.google.com" alt="Google">Google</a>
+    <br />
+
+    <!-- ATTRIBUTES OF ANCHOR TAG -->
+    <!-- Anchor Attributes target="_self" is default-->
+    <a href="https://www.google.com" alt="Google" target="_blank"
+      >Open Google in new Tab</a
+    >
+    <br />
+    <!-- rel attribute: defines relation between current page and linked page 
+    noopener: prevents tab from accessing your page
+    noreferrer: hides reffer info 
+    -->
+    <a href="https://www.google.com" alt="Google" rel="noopener noreferrer"
+      >A Noopener and Noreferrer Link</a
+    >
+    <br />
+    <!-- Download: suggest browser to download the file instead of opening it -->
+    <a href="resume.pdf" alt="resume" download>Download my resume</a>
+
+    <!-- ABSOLUTE AND RELATIVE LINKS -->
+    <!-- 
+    Absolute Link: Full path including Protocol. 
+    Points to external website 
+    -->
+    <a href="https://www.google.com" alt="Google">Google</a>
+    <br />
+    <!-- 
+    Relative Link:
+    Path relative to your current HTML File's locaiton 
+    -->
+    <a href="../04media-elements/assets/a.jpg"
+      >Go up one folder to find image</a
+    >
+    <br />
+
+    <!-- INTERNAL NAVIGATION -->
+    <a href="#contact">Go to contact section</a>
+  </body>
+</html>

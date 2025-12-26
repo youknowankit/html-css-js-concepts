@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid The End</title>
+
+    <style>
+      .container {
+        border: 2px solid blue;
+        min-width: 90%;
+        max-height: 93vh;
+        padding: 10px;
+
+        /*Grid Container Properties*/
+        display: grid;
+        /* grid-template-rows: 80px auto; */
+        /* grid-template-columns: 100px 200px 1fr; */
+        gap: 20px;
+
+        /*GRID BEHAVIOUR*/
+        /*Only parent can control the grid behaviour*/
+        /*Nothing to do with the existing rows but if even a
+        single extra row is created it gets a size of 80px automatically*/
+        grid-auto-rows: 80px;
+
+        /*
+        - **auto-fill** → fills row with as many columns as possible (may leave gaps).
+        - **auto-fit** → same, but stretches items to fill leftover space.
+        */
+
+        /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+        /*CONTROL PLACEMENT OF GRID ITSELF*/
+        justify-content: center;
+        align-content: center;
+      }
+
+      .child {
+        border: 1px solid red;
+      }
+      /*Grid Item Properties*/
+      #child1 {
+        /*They control that a grid column or row will cover how many columns or rows
+        or precisely they will span across how many columns/rows*/
+        grid-row: span 12;
+        grid-column: span 2;
+
+        /*Keep the layout space intact only move the element within that space
+            start | end | center | stretch (default).
+        */
+        justify-self: stretch; /*moves horizontally or left and right*/
+        align-self: start; /*moves vertically or up and down*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child" id="child1">A</div>
+      <div class="child" id="child2">B</div>
+      <div class="child" id="child3">C</div>
+      <div class="child" id="child4">D</div>
+      <div class="child" id="child5">E</div>
+      <div class="child" id="child6">F</div>
+      <div class="child" id="child7">G</div>
+      <div class="child" id="child8">H</div>
+      <div class="child" id="child9">I</div>
+      <div class="child" id="child10">J</div>
+      <div class="child" id="child11">K</div>
+      <div class="child" id="child12">L</div>
+      <div class="child" id="child13">M</div>
+      <div class="child" id="child14">N</div>
+      <div class="child" id="child15">O</div>
+      <div class="child" id="child16">P</div>
+    </div>
+  </body>
+</html>

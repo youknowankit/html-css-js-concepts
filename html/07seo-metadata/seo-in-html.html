@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- MOBILE FRIENDLY VIEWPORT 
+        - Makes page responsive.
+        - Google **ranks mobile-friendly pages higher**. 
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- META DESCRIPTION
+        - Shown under the link in Google.
+        - Between **150–160 characters**.
+        - Unique per page. 
+    -->
+    <meta
+      name="description"
+      content="Learn web development online with interactive courses in HTML, CSS, and JavaScript. Start your coding journey today!"
+    />
+    <!-- OPEN GRAPH & SOCIAL METADATA 
+        - Controls how your site looks when shared on social media. 
+    -->
+    <meta property="og:title" content="LearnNow - Web Dev Courses" />
+    <meta
+      property="og:description"
+      content="Boost your career with expert-led courses."
+    />
+    <meta property="og:image" content="https://example.com/preview.jpg" />
+
+    <!-- TITLE
+        - Appears in browser tab & search engine results. 
+        - Keep under **60 characters**. 
+        - Must be **unique for each page**. 
+        - Title = Keyword + Context + Brand
+    -->
+    <title>SEO in HTML</title>
+
+    <!-- FAVICON ICON
+        - Improves branding & trust.
+        - Appears in tabs, bookmarks, and sometimes in search results. 
+    -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- HEADINGS
+        - Use **H1 once per page** (main topic).
+        - Use H2/H3 to structure content logically.
+        - Search engines read these to understand page hierarchy. 
+    -->
+    <h1>Learn Web Development Online</h1>
+    <h2>HTML & CSS Fundamentals</h2>
+    <h3>Responsive Design with Flexbox</h3>
+
+    <!-- IMAGE ALT ATTRIBUTES 
+        - Helps search engines understand images.
+        - Improves accessibility (screen readers).
+        **Thumb rule:** Describe the image in context, not just "image1". 
+    -->
+    <img src="course.jpg" alt="Students learning web development online" />
+
+    <!-- SEMANTIC TAGS 
+        - Helps search engines understand content structure 
+    -->
+    <header>Header</header>
+    <nav>Navigation</nav>
+    <main>Main</main>
+    <article>Artcile</article>
+    <section>Section</section>
+    <footer>Footer</footer>
+
+    <!-- LINK AND ANCHOR TEXT 
+        - Use **descriptive text**, not just "click here".
+        - Helps both users & search engines. 
+    -->
+    <a href="/courses/JavaScript">Learn JavaScript</a>
+
+    <!-- PAGE PERFORMANCE: 
+        - Lazy Load Images 
+        - Use rel="preload" for important resources
+    -->
+    <img src="large-image.jpg" alt="Web Development Course" loading="lazy" />
+  </body>
+</html>

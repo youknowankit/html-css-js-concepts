@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Elements in HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>Media Elements in HTML</h1>
+    </header>
+    <main>
+      <!-- image tag -->
+      <img src="./assets/a.jpg" loading="lazy" alt="nature image 1" />
+
+      <!-- video tag -->
+      <video width="600" controls autoplay muted loop poster="./assets/b.webp">
+        <source src="demo.mp4" type="video/mp4" />
+        <source src="demo.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- audio tag -->
+      <audio controls autoplay>
+        <source src="portfolio-theme.mp3" type="audio/mpeg" />
+        <source src="portfolio-theme.ogg" type="audio/ogg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Embedded Youtube or Google Maps -->
+      <iframe
+        width="780"
+        height="439"
+        src="https://www.youtube.com/embed/HC2eQKGQIIw"
+        title="Jagjit Singh Live In Mauritius Part 2 - Selected highlights with stereo HD sound"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </main>
+  </body>
+</html>

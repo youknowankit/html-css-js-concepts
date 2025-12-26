@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Form</h1>
+    </header>
+    <main>
+      <form action="#" method="POST">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter username"
+          name="username"
+          required
+        />
+        <br />
+        <br />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter email"
+          name="email"
+          required
+        />
+        <br />
+        <br />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter password"
+          name="password"
+          required
+        />
+        <br />
+        <br />
+        <label for="confirm-password">Confirm Password</label>
+        <input
+          type="confirm-password"
+          id="confirm-password"
+          placeholder="Enter confirm password "
+          name="confirm-password"
+          required
+        />
+        <br />
+        <br />
+        <label for="age">Age</label>
+        <input
+          type="number"
+          id="age"
+          placeholder="Enter your age"
+          name="age"
+          value="18"
+          min="18"
+          max="65"
+          step="1"
+          required
+        />
+        <br />
+        <br />
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required />
+        <br />
+        <br />
+        <!-- Gender -->
+        <fieldset>
+          <legend>Select your Gender:</legend>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </fieldset>
+
+        <!-- Interests -->
+        <fieldset>
+          <legend>Select your interests:</legend>
+          <input type="checkbox" name="interests" id="sports" />
+          <label for="sports">Sports</label>
+          <input type="checkbox" name="interests" id="music" />
+          <label for="music">Music</label>
+          <input type="checkbox" name="interests" id="drama" />
+          <label for="drama">Drama</label>
+        </fieldset>
+        <br />
+
+        <!-- Input File -->
+        <label for="profile">Upload your Profile Photo:</label>
+        <input type="file" id="profile" />
+        <br /><br />
+
+        <!-- Color -->
+        <label for="favcolor">Choose your Favourite Color: </label>
+        <input type="color" id="favcolor" name="favcolor" />
+
+        <!-- Range -->
+        <label for="experience">Experience (1-10)</label>
+        <input type="range" id="experience" min="1" max="10" value="2" />
+      </form>
+
+      <!-- DataList -->
+      <label for="country">Select your country:</label>
+      <input list="countries" id="country" name="country" />
+      <datalist id="countries">
+        <option value="India"></option>
+        <option value="USA">United States of America</option>
+        <option value="UK"></option>
+        <option value="France"></option>
+      </datalist>
+      <br /><br />
+      <!-- Select -->
+      <label for="city">Select your city:</label>
+      <select name="city" id="city">
+        <option value="delhi">Delhi</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="chennai">Chennai</option>
+        <option value="coimbature">Coimbature</option>
+      </select>
+      <br /><br />
+
+      <!-- TextArea -->
+      <label for="bio">Bio:</label>
+      <textarea
+        name="bio"
+        id="bio"
+        rows="4"
+        cols="40"
+        placeholder="Tell us about yourself"
+      ></textarea>
+
+      <button type="submit">Submit</button>
+    </main>
+  </body>
+</html>
