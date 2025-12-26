@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <style>
+      /*DISPLAY INLINE & INLINE BLOCK*/
+      .card {
+        height: 200px;
+        width: 200px;
+        border: 1px solid black;
+        text-align: center;
+        border-radius: 20px;
+        background-color: lightblue;
+        margin: auto;
+      }
+      .card button {
+        /*default: block- occupies the whole space and doesnot respect text-align
+          inline/inline-block: behaves like text
+        */
+        display: inline-block;
+        padding: 10px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Open Dev Tools and see the box-model with</h1>
+    <p>Content</p>
+    <p>Padding</p>
+    <p>Border</p>
+    <p>margin</p>
+
+    <div class="card">
+      <h3>T-Shirts</h3>
+      <p>Buy this T-shirt at a premium quality for just 999</p>
+      <button>Add to Cart</button>
+    </div>
+  </body>
+</html>
