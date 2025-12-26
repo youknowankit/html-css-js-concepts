@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox</title>
+    <style>
+      /*
+        CONTAINER PROPERTIES:
+        1. display:flex: activates flexbox
+        2. flex-direction: row, row-reverse, column, column-reverse
+        3. justify-content: flex-start, flex-end, center, space-between, space-around, space-evenly
+        4. align-items: stretch, flex-start, flex-end, center, baseline
+        5. flex-wrap: nowrap, wrap, wrap-reverse
+
+        ITEM PROPERTIES:
+        1. flex-grow: 0(default) : controls how much an item can grow relative to others
+        2. flex-shrink: 1(default) : setting 0 prevents shrinking
+        3. flex-basis: initial size of item before grow/shrink. Can be in px, %, auto
+        4. order: 0(default) controls item order, smaller values appear first
+        5. align-self: over-rides align-items for a specific item
+
+
+        Problem	Fix
+            1. Items overflow ->	flex-wrap: wrap
+            2. Cards not resizing ->	flex: 1 1 300px
+            3. Bad mobile layout ->	flex-direction: column
+            4. Spacing issues ->	gap
+            5. Alignment breaks -> Responsive justify-content
+        */
+
+      .container {
+        border: 1px solid brown;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        /* flex: 1 1 100px; */
+      }
+
+      .item {
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+      }
+
+      /*
+        - **`flex-grow`** → *How much to stretch when there’s extra space.*
+        - **`flex-wrap`** → *Should items stay on one line or wrap?*
+        - **`flex-basis`** → *What size to start with.*
+        - **`order`** = *Where should this item appear compared to others? Only visually no change to HTML order*
+        - **`align-self`** = *Should this item follow the group’s alignment or have its own rule?*
+      */
+      .item1 {
+        flex-basis: auto;
+        /*This particular item will grow to fill the available space*/
+        flex-grow: 1;
+        align-self: baseline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+    </div>
+  </body>
+</html>
