@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Demo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        font-size: 16px;
+      } /* Base size */
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        margin: 2rem;
+      }
+
+      h1 {
+        /* font-size: 2rem; 32px */
+        letter-spacing: 1px;
+      }
+
+      .post {
+        font-size: 1rem; /* 16px base */
+        margin-bottom: 2rem;
+      }
+
+      .post p {
+        font-size: 1.2em; /* 1.2 × parent (post’s font-size = 16px → 19.2px) */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Blog</h1>
+    <div class="post">
+      <h2>First Post</h2>
+      <p>
+        This is a paragraph using <code>em</code> scaling relative to its parent
+        font-size.
+      </p>
+    </div>
+    <div class="post">
+      <h2>Second Post</h2>
+      <p>
+        This is another paragraph. If you change
+        <code>html { font-size: }</code>, rem-based elements scale consistently.
+      </p>
+    </div>
+  </body>
+</html>
