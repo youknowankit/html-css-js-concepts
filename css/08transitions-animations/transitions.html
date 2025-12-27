@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      .item {
+        height: 100px;
+        width: 100px;
+        background-color: brown;
+        border: 1px solid;
+        margin: 10px;
+
+        /*TRANSITION:
+            property duration timing-function
+
+            Transition timing functions:
+                ease
+                linear
+                ease-in
+                ease-out
+                ease-in-out
+                cubic-bezier(x1,y1,x2,y2)
+        */
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
+
+      .item:hover {
+        background-color: aqua;
+        transform: scale(1.1);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      button {
+        background: #3498db;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+        margin: 10px;
+      }
+
+      button:hover {
+        background: #2980b9;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        Transition is used when you want a smooth change between two states.
+        (e.g. hover, active)
+      </h2>
+      <p>You have to provide the following items:</p>
+      <ul>
+        <li>transition-property: What property should change smoothly?</li>
+        <li>
+          transition-duration: how long should the change take? (in s or ms)
+        </li>
+        <li>transition-timing-function: the speed curve of the transition</li>
+      </ul>
+      <div class="grid">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+      </div>
+      <button>Click Me</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      /*ANIMATIONS:
+            1. Define Animation Steps first then consume this:
+            @keyframes animation-name{
+                0% {transform: translateY(0)}
+                50% {transform: translateY(-50px)}
+                100% {transform: translateY(0)}
+            }
+            2. Consuming this animation
+            animation: animation-name duration animation-iteration-count animation-timing-function animation-delay animation-direction
+
+            animation-name: links the element to the keyframe name
+            animation-duration: how long one cycle lasts
+            animation-iteration-count: how many times to repeat (1, infinite)
+            animation-timing-function: speed-curve
+            animation-delay: start after sometime
+            animation-direction: 
+                normal: (default) play forward
+                reverse: play backward
+                alternate: forward then backward
+                alternate-reverse: backward then forward 
+        */
+
+      /*Bouncing ball Animation:*/
+
+      *{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      .container{
+        display: flex;
+      }
+      .item {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        margin: 10px;
+        border-radius: 50%;
+        position: relative;
+        background: red;
+        animation: bounce 1s infinite ease-in-out;
+        transition: background 300 ease, transform 1s ease;
+      }
+
+      .item:hover{
+        background: #333;
+        animation: none;
+        transform: scale(1.1);
+      }
+
+      @keyframes bounce {
+        0% {
+          top: 0;
+        }
+        50% {
+          top: 150px;
+        }
+        100% {
+          top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Brownian Motion</h1>
+    <p>
+      An animation is more powerful than a transition. It uses keyframes to
+      define multiple steps of motion or styling.
+    </p>
+
+    <div class="container">
+      <div class="item item1"></div>
+      <div class="item item2"></div>
+      <div class="item item3"></div>
+      <div class="item item4"></div>
+      <div class="item item5"></div>
+    </div>
+  </body>
+</html>
