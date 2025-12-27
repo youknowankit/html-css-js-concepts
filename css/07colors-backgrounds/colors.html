@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors</title>
+    <style>
+      /*Hexadecimal Format*/
+      h1 {
+        color: #1e90ff;
+      }
+
+      /*RGB|RGBA:  RGB: rgb(255, 0, 0) | RGBA: rgba()*/
+      p {
+        color: rgb(34, 139, 34);
+      }
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+      }
+
+      /*HSL: (hue(0-360), saturation(0-100%), lightness(0-100%))*/
+      button {
+        background-color: hsl(200, 100%, 50%);
+      }
+
+      /*GRADIENTS:*/
+
+      /* 1. Linear Gradient: Transition along a line::after
+            a. Takes to right, to bottom or an angle like 45deg
+            b. Take two colors
+      */
+      .linear {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        margin: 20px;
+      }
+
+      /*2. Radial Gradient: Transition from center to edges
+            a. Takes a shape circle, ellipse
+            b. takes two colors      
+      */
+      .radial {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        background: radial-gradient(circle, #3618bd, #feb47b);
+        margin: 20px;
+      }
+
+      /*3. Conic Gradient: Transition around a center point (like a pie chart)
+            a. Take angle like 90deg
+            b. Takes four colors
+      */
+      .conic {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        background: conic-gradient(from 90deg, red, yellow, green, blue);
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi I am color coach!</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui libero nam
+      tempore rem illum debitis odit, autem error velit in minima sint neque
+      sequi excepturi molestiae suscipit magni ea sed.
+    </p>
+    <div class="linear">I am a linear div</div>
+    <div class="radial">I am a radial div</div>
+    <div class="conic">I am a radial div</div>
+  </body>
+</html>
