@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced CSS</title>
+    <style>
+      /*CSS VARIABLES:*/
+      :root {
+        --main-color: #3498db;
+        --text-color: #222;
+      }
+      body {
+        background: var(--main-color, blue); /*blue: fallback value*/
+        color: var(--text-color);
+      }
+      button {
+        background: var(--main-color);
+        border: 1px solid;
+        margin: 20px;
+        color: white;
+        padding: 10px 20px;
+      }
+
+      /*MATH FUNCTIONS: 
+        calc(), 
+        clamp(), 
+        min(), 
+        max() 
+      */
+      .item {
+        border: 1px solid #222;
+        width: calc(100% - 50px);
+        height: calc(50vh - 20px);
+      }
+      /*clamp(min, preferred, max)
+        Keeps a value responsive but within limits.
+        It grows with screen size but never below 1rem or above 3rem.
+      */
+      h1 {
+        font-size: clamp(1rem, 5vw, 3rem);
+      }
+      /*min: Takes the smallest value*/
+      div {
+        width: min(90%, 400px);
+      }
+      /*max: Takes the largest value*/
+      div {
+        width: max(200px, 50%); /* min 200px */
+      }
+
+      /*CSS FILTERS: Used for visual effects on images or elements.
+        Common Filters: 
+            blur(5px)
+            grayscale(100%)
+            sepia(80%)
+            brightness(120%)
+            contrast(150%)
+            drop-shadow(x y blur color)
+      */
+      img {
+        filter: grayscale(100%); /* black & white */
+      }
+      .card {
+        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+      }
+      .blur-bg {
+        backdrop-filter: blur(10px);
+      }
+
+      /*Shapes & clip-path: Crops elements into custom shapes */
+      .circle {
+        clip-path: circle(50%);
+      }
+      .polygon {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+      }
+      .image {
+        clip-path: ellipse(50% 30% at 50% 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Advanced CSS</h1>
+    <div class="container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+      <button>Click Me</button>
+    </div>
+  </body>
+</html>
