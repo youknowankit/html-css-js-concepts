@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transforms-in-css</title>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      /*
+      Transform = change appearance without touching layout
+
+      Basic Syntax of CSS Transform
+        element {
+            transform: transform-function(value);
+        }
+        There are 5 core transform functions:
+        1. translate() : Move Element
+        2. scale() : Resize Element
+        3. rotate() : Rotate Element
+        4. skew() : Tilt Element
+        5. matrix() : Advanced(skip for now)
+      */
+      /*TRANSLATE: moves element in x and y
+        transform: translate(x,y);
+      */
+      .box {
+        transform: translate(150px, 20px);
+        /* Individual */
+        /* transform: translateX(50px); */
+        /* transform: translateY(-20px); */
+      }
+
+      /*SCALE: Resize without layout break
+        transform: scale(value);
+
+        Scale directions:
+        scaleX(1.5)
+        scaleY(0.8)
+      */
+
+      .box {
+        height: 100px;
+        width: 100px;
+        background: green;
+        /* transform: rotate(45deg); */
+        transform: scale(1.2);
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      /*ROTATE: Rotate Elements
+          transform: rotate(angle);
+          deg → degrees
+          turn → full rotation
+          rad → radians
+      */
+      .icon {
+        transform: rotate(0.5turn); /* 180 degrees */
+        transform: rotate(45deg);
+      }
+
+      /*SKEW: TILT ELEMENTS: Create slanted/Angled Effects
+        transform: skew(x-angle, y-angle)
+      */
+      .box {
+        transform: skew(20deg, 0);
+      }
+
+      /*COMBINING MULTIPLE PROPERTIES:
+        Multiple transform properties cannot be written: 
+        transform: rotate(45deg) X
+        transform: scale(1.2) X
+
+        Order Matters: 
+        Rotate -> Scale != Scale->Rotate
+      */
+      .box {
+        transform: rotate(45deg) scale(1.2) translateX(20px);
+      }
+
+      /*TRANSFORM ORIGIN: Control Pivot Point*/
+      .box {
+        tranform-origin: top left;
+      }
+
+      /*2D vs 3D:
+        3D Examples:
+        rotateX()
+        rotateY()
+        translateZ()
+      */
+
+      /*
+      Real-World UI Examples
+            Feature	        Transform Used
+            Card hover	    scale
+            Dropdown	    translateY
+            Modal	        translate + scale
+            Icon animation	rotate
+            Button press	scale(0.95)
+      */
+    </style>
+  </head>
+  <body>
+    <h1>Learning CSS Transforms</h1>
+    <div class="box"></div>
+  </body>
+</html>
