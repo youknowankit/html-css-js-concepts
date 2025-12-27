@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backgrounds</title>
+    <style>
+      /*Combining all the properties:*/
+      .container {
+        border: 1px solid black;
+      }
+      #image1 {
+        padding: 10px;
+        height: 600px;
+        background-image: url("../../html/04media-elements/assets/a.jpg");
+        /*do we want background to repeat or not*/
+        background-repeat: no-repeat;
+        /*Placing image inside the box*/
+        background-position: center;
+        /*This is for setting size of the image inside the box. 
+        Options are: cover/auto/contain*/
+        background-size: cover;
+
+        /*SINGLE SYNTAX:*/
+        background: url("../../html/04media-elements/assets/a.jpg") no-repeat
+          center/cover;
+
+        /*ADVANCED PROPERTIES:*/
+        /*where does background extend:
+            border-box: behind the border (default)
+            padding-box: Only inside padding
+            content-box: only inside content
+        */
+        background-clip: border-box;
+        /*controls background scrolling:
+            scroll: background scrolls with content
+            fixed: background stays fixed
+            local: moves with element's content
+        */
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="image1">Image1</div>
+      <div id="image2">Image2</div>
+      <div id="image3">Image3</div>
+      <div id="image4">Image4</div>
+      <div id="image5">Image5</div>
+    </div>
+  </body>
+</html>
