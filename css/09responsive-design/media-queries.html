@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      /*MEDIA QUERIES:
+        max-width: 768px means for screens upto 768px (tablet/mobile)
+        min-width: 769px means for screens 769px and above (desktop)
+
+        Mobile-First: 
+        Start with styles for small screens and add styles for larger screens using min-width.
+        base-style 14px min-width 768{ 16px }
+        
+        Desktop-First: 
+        Start with large screen styles and adjust for smaller screens using max-width.
+        base-style: 18px max-width: 768px {14px}
+
+        Defining Media Query:
+        @media (max/min-width: screen-size){
+            element/selector{
+                property: value;
+            }
+        }
+        */
+
+      /* Example: For screens up to 768px (tablet/mobile) */
+      @media (max-width: 768px) {
+        body {
+          background-color: lightblue;
+        }
+      }
+
+      /* Example: For screens 769px and above (desktop) */
+      @media (min-width: 769px) {
+        body {
+          background-color: lightgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item5">item5</div>
+    </div>
+  </body>
+</html>
